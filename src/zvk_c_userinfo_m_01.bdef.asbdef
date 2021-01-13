@@ -1,0 +1,27 @@
+managed implementation in class zcl_bp_vk_c_userinfo_m_01 unique;
+
+define behavior for ZVK_C_USERINFO_M_01 alias User_01
+persistent table zvk_userinfo
+lock master
+//authorization master ( instance )
+etag master lastChangedAt
+{
+  //  field ( readonly ) UserEmail;
+
+  create;
+  update;
+  delete;
+
+  mapping for zvk_userinfo
+  {
+    FirstName = first_name;
+    LastName = last_name;
+    UserEmail = user_email;
+    IsAdmin = is_admin;
+  }
+
+  action makeUserAdmin result [1] $self;
+
+  validation validEmail on save { field UserEmail; }
+  determination assignAdmin on modify { field UserEmail; }
+}

@@ -1,0 +1,5 @@
+CLASS zcl_bp_vk_c_userinfo_m_01 DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zvk_c_userinfo_m_01.
+ENDCLASS.
+
+CLASS zcl_bp_vk_c_userinfo_m_01 IMPLEMENTATION.
+ENDCLASS.

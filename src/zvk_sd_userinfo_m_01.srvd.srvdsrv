@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition User'
+define service ZVK_SD_USERINFO_M_01 {
+  expose ZVK_C_USERINFO_M_01;
+}
